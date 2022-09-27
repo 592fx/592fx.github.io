@@ -1,0 +1,91 @@
+
+<!--
+  Merger v0.21.1 - Merge Your Qrcode Together. Even Quicker.
+  User docs: https://docs.justhx.com/merger
+  Released under GNU General Public License v3.0. Open source at https://github.com/hifocus/merger.
+  Author @hifocus (https://github.com/hifocus), @LF112 (https://github.com/LF112)
+  Please preserve the copywrite notices above as required by the license.
+ -->
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/styles/spectre.css/spectre-modified.min.css,gh/hifocus/merger@0.21.1/assets/styles/style.min.css" />
+    
+    <script src='https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/js/jQuery/jquery.min.js,gh/hifocus/merger@0.21.1/assets/js/jquery-qrcode/jquery-qrcode.min.js,gh/hifocus/merger@0.21.1/assets/js/JavaScript_MD5/md5.min.js,gh/hifocus/merger@0.21.1/assets/js/function.min.js,gh/hifocus/merger@0.21.1/assets/js/font_974919_xgtacm93vxp.min.js' defer='defer' >
+    </script>
+    
+    <script>
+      var usage = "payment";
+      var wechat = "wxp://f2f0AHlaHfGu-952b8g21Zasb5b4emuBpgZL";
+      var tenpay = "https://i.qianbao.qq.com/wallet/sqrcode.htm?m=tenpay&a=1&u=724300087&ac=CAEQt-Kv2QIYq4ro9gU%3D_xxx_sign&n=%E3%82%93%E2%84%83%C4%8E";
+      var alipay = "https://qr.alipay.com/fkx105334myxdy52jwwbo4b";
+      var paypal = "";
+      var myname = "huhansome";
+      var profile = "https://cdn.jsdelivr.net/gh/huhansome/huhansome.github.io/assets/images/avatar.jpg";
+      var multilingual = true;
+      var myname_hans = "huhansome";
+      var myname_hant = "huhansome";
+      var myname_eng = "huhansome";
+      var title = "选择你的支付方式";
+      var subtitle = "跟随进一步的指示以向" + myname + "投递狗粮";
+      var qrcodeapi = "https://www.zhihu.com/qrcode?url=";
+    </script>
+    
+</head>
+
+<body>
+  <div class="main" id="h">
+    <i id="i"></i>
+    <div class="texts">
+      <h2 id="name"></h2>
+      <p id="description"></p>
+    </div>
+
+    <!-- Button Section Starts -->
+    <div id="pending">
+      <p id="depends" class="middlebtn">
+        <a href="#showqrcode" class="btn btn-primary" id="tenpaybtn" onclick="opentenpay()"><svg class="icon"
+            aria-hidden="true">
+            <use xlink:href="#icon-QQ"></use>
+          </svg></a>
+        <a href="#showqrcode" class="btn btn-primary" id="toclick" onclick="openwechat()"><svg class="icon"
+            aria-hidden="true">
+            <use xlink:href="#icon-weixinzhifu"></use>
+          </svg></a>
+        <a href="#showqrcode" class="btn btn-primary" id="alipaybtn" onclick="openalipay()"><svg class="icon"
+            aria-hidden="true">
+            <use xlink:href="#icon-iconfontrectangle390"></use>
+          </svg></a>
+        <button class="btn btn-primary" id="paypalbtn" onclick="openbox()"><svg class="icon paypal-wide"
+            aria-hidden="true">
+            <use xlink:href="#icon-paypal"></use>
+          </svg></button>
+      </p>
+    </div>
+  </div>
+
+  <!-- Button Section Ends -->
+
+  <!-- Modal Section Starts -->
+  <div class="modal" id="showqrcode">
+    <div class="modal-container" role="document">
+      <div class="modal-header" id="btncontainer">
+        <a href="#" class="btn btn-clear float-right" id="qrcodeclose" aria-label="Close"></a>
+        <div id="titleinfo" class="modal-title h5" style="text-align: center"></div>
+      </div>
+      <div class="modal-body">
+        <div class="content" id="qrcontainer">
+          <div id="currentqrcode" class="img smaller"></div>
+          <img id="tenpayonly" class="img smaller">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+</html>

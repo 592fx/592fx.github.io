@@ -25,12 +25,14 @@ author: 胡曦然
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
   Resources:
     - Beautiful Jekyll: "https://beautifuljekyll.com"
     - Learn markdown: "https://www.markdowntutorial.com/"
   Author's home: "https://deanattali.com"
-
+  云服务:
+    - 云建站: "https://ac.aliyun.com/application/webdesign/sumei?source=5176.11533457&userCode=j6bryttg"
+    - 主机、数据库: "yun"
+    
 ################
 # --- Logo --- #
 ################
