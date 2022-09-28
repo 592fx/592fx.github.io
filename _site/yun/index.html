@@ -12,7 +12,7 @@
   <title>个人网站选什么服务器？</title>
 
   
-  <meta name="author" content="胡曦然">
+  <meta name="author" content="huhansome">
   
 
   <meta name="description" content="个人搭建博客网站选什么服务器？云主机选哪家的便宜？云服务器该怎么选？">
@@ -99,8 +99,8 @@
   
   <meta name="twitter:card" content="summary">
   
-  <meta name="twitter:site" content="@daattali">
-  <meta name="twitter:creator" content="@daattali">
+  <meta name="twitter:site" content="@xxx">
+  <meta name="twitter:creator" content="@xxx">
 
   <meta property="twitter:title" content="个人网站选什么服务器？">
   <meta property="twitter:description" content="个人搭建博客网站选什么服务器？云主机选哪家的便宜？云服务器该怎么选？">
@@ -131,16 +131,22 @@
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">分类</a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="https://beautifuljekyll.com">Beautiful Jekyll</a>
-                  <a class="dropdown-item" href="https://www.markdowntutorial.com/">Learn markdown</a>
+                  <a class="dropdown-item" href="/game">好游戏</a>
+                  <a class="dropdown-item" href="/app">好应用</a>
+                  <a class="dropdown-item" href="/other">其他</a>
             </div>
           </li>
         
-          <li class="nav-item">
-            <a class="nav-link" href="https://deanattali.com">Author's home</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">实惠省钱</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="https://dea.om">网页版</a>
+                  <a class="dropdown-item" href="https://dea.om">app/小程序</a>
+            </div>
           </li>
+        
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">云服务</a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -189,14 +195,28 @@
     var searchjson = '[ \
        \
         { \
-          "title"    : "Sample blog post", \
+          "title"    : "[&quot;app&quot;]", \
+          "category" : "bookstest", \
+          "url"      : "/2022-05-26-flt-till-top-sd/", \
+          "date"     : "May 26, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "[&quot;其他&quot;]", \
+          "category" : "test", \
+          "url"      : "/2020-02-28-test-own%E7%9A%84%E5%89%AF%E6%9C%AC/", \
+          "date"     : "February 28, 2020" \
+        }, \
+       \
+        { \
+          "title"    : "[&quot;app&quot;, &quot;game&quot;]", \
           "category" : "test", \
           "url"      : "/2020-02-28-test-markdown/", \
           "date"     : "February 28, 2020" \
         }, \
        \
         { \
-          "title"    : "Flake it till you make it", \
+          "title"    : "没有分类", \
           "category" : "bookstest", \
           "url"      : "/2020-02-26-flake-it-till-you-make-it/", \
           "date"     : "February 26, 2020" \
@@ -220,7 +240,14 @@
         { \
           "title"    : "About me", \
           "category" : "page", \
-          "url"      : "/aboutme/", \
+          "url"      : "/app/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "About me", \
+          "category" : "page", \
+          "url"      : "/game/", \
           "date"     : "January 1, 1970" \
         }, \
        \
@@ -228,6 +255,13 @@
           "title"    : "我就爱分享", \
           "category" : "page", \
           "url"      : "/", \
+          "date"     : "January 1, 1970" \
+        }, \
+       \
+        { \
+          "title"    : "About me", \
+          "category" : "page", \
+          "url"      : "/other/", \
           "date"     : "January 1, 1970" \
         }, \
        \
@@ -306,7 +340,7 @@
 
 <p>目前来说阿里云建站还是不错的，阿里云为广大用户提供域名注册、全自助在线免费备案、同时支持阿里云域名一键解析，一站式服务让网站上线更快速。据了解，阿里云建站产品还支持退款服务，模板建站产品5天无理由退换，定制建站产品不满意全额退，超级贴心。</p>
 
-<h4 id="腾讯云">腾讯云</h4>
+<p class="box-note"><strong>腾讯云</strong></p>
 
 <!--云产品特惠专区-->
 <center style="margin-bottom: 40px; margin-top: 20px">
@@ -374,7 +408,7 @@
 </center>
 <hr />
 
-<h4 id="阿里云">阿里云</h4>
+<p class="box-note"><strong>阿里云</strong></p>
 
 <!--新人福利会场-->
 <center style="margin-bottom: 40px; margin-top: 20px">
@@ -474,7 +508,7 @@
       <span class="sr-only">Email me</span>
    </a>
   </li><li class="list-inline-item">
-    <a href="https://www.facebook.com/deanattali" title="Facebook">
+    <a href="https://www.facebook.com/xxx" title="Facebook">
       <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fas fa-circle fa-stack-2x"></i>
         <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
@@ -482,7 +516,7 @@
       <span class="sr-only">Facebook</span>
    </a>
   </li><li class="list-inline-item">
-    <a href="https://github.com/daattali" title="GitHub">
+    <a href="https://github.com/xxx" title="GitHub">
       <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fas fa-circle fa-stack-2x"></i>
         <i class="fab fa-github fa-stack-1x fa-inverse"></i>
@@ -490,7 +524,7 @@
       <span class="sr-only">GitHub</span>
    </a>
   </li><li class="list-inline-item">
-    <a href="https://twitter.com/daattali" title="Twitter">
+    <a href="https://twitter.com/xxx" title="Twitter">
       <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fas fa-circle fa-stack-2x"></i>
         <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -498,7 +532,7 @@
       <span class="sr-only">Twitter</span>
    </a>
   </li><li class="list-inline-item">
-    <a href="https://www.youtube.com/c/daattali" title="YouTube">
+    <a href="https://www.youtube.com/xxx" title="YouTube">
       <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fas fa-circle fa-stack-2x"></i>
         <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
@@ -506,7 +540,7 @@
       <span class="sr-only">YouTube</span>
    </a>
   </li><li class="list-inline-item">
-    <a href="https://patreon.com/DeanAttali" title="Patreon">
+    <a href="https://patreon.com/xxx" title="Patreon">
       <span class="fa-stack fa-lg" aria-hidden="true">
         <i class="fas fa-circle fa-stack-2x"></i>
         <i class="fab fa-patreon fa-stack-1x fa-inverse"></i>

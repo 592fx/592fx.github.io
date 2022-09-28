@@ -14,10 +14,10 @@ title: 我就爱分享
 
 # The keywords to associate with your website, for SEO purposes
 #keywords: "my,list,of,keywords"
-keywords: "我就爱分享, 59ifx, 游戏分享, app分享, 云主机分享, 互联网分享, 知识分享"
+keywords: "我就爱分享, 59ifx, 游戏分享, app分享, 云主机分享, 互联网分享, 知识分享, huhansome"
 
 # Your name to show in the footer
-author: 胡曦然
+author: huhansome
 
 
 ###############################################
@@ -25,10 +25,13 @@ author: 胡曦然
 ###############################################
 
 navbar-links:
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  分类:
+    - 好游戏: "game"
+    - 好应用: "app"
+    - 其他: "other"
+  实惠省钱:
+    - 网页版: "https://dea.om"
+    - app/小程序: "https://dea.om"
   云服务:
     - 云建站: "https://ac.aliyun.com/application/webdesign/sumei?source=5176.11533457&userCode=j6bryttg"
     - 主机、数据库: "yun"
@@ -58,11 +61,12 @@ title-img: "/assets/img/title-image.png"
 social-network-links:
   email: "hucd_mail@yeah.net"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: c/daattali
+  facebook: xxx
+  github: xxx
+  twitter: xxx
+  patreon: xxx
+  youtube: xxx
+#  youtube: c/daattali
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
@@ -241,7 +245,7 @@ footer-hover-col: "#0085A1"
 ################
 
 # Ruby Date Format to show dates of posts
-date_format: "%B %-d, %Y"
+date_format: "%Y年%m月%d日"
 
 # Facebook App ID
 #fb_app_id: ""

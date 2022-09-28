@@ -8,41 +8,29 @@ layout: page
 <!--{% assign posts = paginator.posts | default: site.posts %}-->
 <!--新的，增加置顶功能-->
 
-{% assign pinned = site.posts | where: "pin", "true" %}
-{% assign default = site.posts | where_exp: "item", "item.pin != true" %}
-
+<!--{% assign pinned = site.posts | where: "pin", "true" %}-->
+{% assign pinned = "" | split: "" %}
+{% assign notPinned = "" | split: "" %}
 {% assign posts = "" | split: "" %}
 
-<!-- Get pinned posts -->
+{% for post in site.posts %}
+    {% if post.pin == true and post.categories contains 'app'  %}
+    {% assign pinned = pinned | push: post %}
+    {% endif %}
 
-{% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign pinned_num = pinned.size | minus: offset %}
-
-{% if pinned_num > 0 %}
-  {% for i in (offset..pinned.size) limit: pinned_num %}
-    {% assign posts = posts | push: pinned[i] %}
-  {% endfor %}
-{% else %}
-  {% assign pinned_num = 0 %}
-{% endif %}
+    {% if post.pin != true and post.categories contains 'app'  %}
+    {% assign notPinned = notPinned | push: post %}
+    {% endif %}
+{% endfor %}
 
 
-<!-- Get default posts -->
+{% for post in pinned %}
+  {% assign posts = posts | push: post %}
+{% endfor %}
 
-{% assign default_beg = offset | minus: pinned.size %}
-
-{% if default_beg < 0 %}
-  {% assign default_beg = 0 %}
-{% endif %}
-
-{% assign default_num = paginator.posts | size | minus: pinned_num  %}
-{% assign default_end = default_beg | plus: default_num | minus: 1 %}
-
-{% if default_num > 0 %}
-  {% for i in (default_beg..default_end) %}
-    {% assign posts = posts | push: default[i] %}
-  {% endfor %}
-{% endif %}
+{% for post in notPinned %}
+  {% assign posts = posts | push: post %}
+{% endfor %}
 
 
 <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
