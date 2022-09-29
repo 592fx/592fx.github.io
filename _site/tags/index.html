@@ -15,7 +15,7 @@
   <meta name="author" content="huhansome">
   
 
-  <meta name="description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
+  <meta name="description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:&apos;,&apos; | sort -%} {%- for tag...">
 
   
 
@@ -86,7 +86,7 @@
   
   <meta property="og:site_name" content="我就爱分享">
   <meta property="og:title" content="Tag Index">
-  <meta property="og:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
+  <meta property="og:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:&apos;,&apos; | sort -%} {%- for tag...">
 
   
   <meta property="og:image" content="http://localhost:4000/assets/img/avatar-icon.jpeg">
@@ -105,7 +105,7 @@
   <meta name="twitter:creator" content="@xxx">
 
   <meta property="twitter:title" content="Tag Index">
-  <meta property="twitter:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
+  <meta property="twitter:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:&apos;,&apos; | sort -%} {%- for tag...">
 
   
   <meta name="twitter:image" content="http://localhost:4000/assets/img/avatar-icon.jpeg">
@@ -197,17 +197,24 @@
     var searchjson = '[ \
        \
         { \
-          "title"    : "[&quot;app&quot;]", \
+          "title"    : "手机上好用的时钟APP推荐", \
+          "category" : "翻页时钟时钟APP极简时钟App Store酷炫时钟", \
+          "url"      : "/2022-09-10-CreativeClock/", \
+          "date"     : "September 10, 2022" \
+        }, \
+       \
+        { \
+          "title"    : "没有分类", \
           "category" : "bookstest", \
-          "url"      : "/2022-05-26-flt-till-top-sd/", \
-          "date"     : "May 26, 2022" \
+          "url"      : "/2022-02-26-flake-it-till-you-make-it/", \
+          "date"     : "February 26, 2022" \
         }, \
        \
         { \
           "title"    : "[&quot;其他&quot;]", \
           "category" : "test", \
-          "url"      : "/2020-02-28-test-own%E7%9A%84%E5%89%AF%E6%9C%AC/", \
-          "date"     : "February 28, 2020" \
+          "url"      : "/2021-09-28-test-own%E7%9A%84%E5%89%AF%E6%9C%AC/", \
+          "date"     : "September 28, 2021" \
         }, \
        \
         { \
@@ -218,25 +225,18 @@
         }, \
        \
         { \
-          "title"    : "没有分类", \
+          "title"    : "[&quot;app&quot;]", \
           "category" : "bookstest", \
-          "url"      : "/2020-02-26-flake-it-till-you-make-it/", \
-          "date"     : "February 26, 2020" \
+          "url"      : "/2005-04-26-flt-till-top-sd/", \
+          "date"     : "April 26, 2005" \
         }, \
        \
        \
         { \
           "title"    : "Privacy Policy", \
           "category" : "隐私协议隐私政策App Store上架", \
-          "url"      : "/2022-09-09-Privacy-Policy/", \
+          "url"      : "/Privacy-Policy/", \
           "date"     : "September  9, 2022" \
-        }, \
-       \
-        { \
-          "title"    : "手机上好用的时钟APP推荐", \
-          "category" : "翻页时钟时钟APP极简时钟App Store酷炫时钟", \
-          "url"      : "/2022-09-10-CreativeClock/", \
-          "date"     : "September 10, 2022" \
         }, \
        \
         { \
@@ -331,33 +331,42 @@
     <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
       
 
-      <a href="#books" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;books&nbsp;(2)</a><a href="#test" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;test&nbsp;(4)</a><div id="full-tags-list"><h2 id="books" class="linked-section">
+      <a href="#App Store" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;App Store&nbsp;(1)</a><a href="#books" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;books&nbsp;(2)</a><a href="#test" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;test&nbsp;(4)</a><a href="#时钟APP" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;时钟APP&nbsp;(1)</a><a href="#极简时钟" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;极简时钟&nbsp;(1)</a><a href="#翻页时钟" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;翻页时钟&nbsp;(1)</a><a href="#酷炫时钟" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;酷炫时钟&nbsp;(1)</a><div id="full-tags-list"><h2 id="App Store" class="linked-section">
+        <i class="fas fa-tag" aria-hidden="true"></i>
+        &nbsp;App Store&nbsp;(1)
+    </h2>
+    <div class="post-list"><div class="tag-entry">
+                <a href="/2022-09-10-CreativeClock/">手机上好用的时钟APP推荐</a>
+                <div class="entry-date">
+                    <time datetime="2022-09-10T17:38:00+08:00">2022年09月10日</time>
+                </div>
+            </div></div><h2 id="books" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
         &nbsp;books&nbsp;(2)
     </h2>
     <div class="post-list"><div class="tag-entry">
-                <a href="/2022-05-26-flt-till-top-sd/">["app"]</a>
+                <a href="/2022-02-26-flake-it-till-you-make-it/">没有分类</a>
                 <div class="entry-date">
-                    <time datetime="2022-05-26T00:00:00+08:00">2022年05月26日</time>
+                    <time datetime="2022-02-26T00:00:00+08:00">2022年02月26日</time>
                 </div>
             </div><div class="tag-entry">
-                <a href="/2020-02-26-flake-it-till-you-make-it/">没有分类</a>
+                <a href="/2005-04-26-flt-till-top-sd/">["app"]</a>
                 <div class="entry-date">
-                    <time datetime="2020-02-26T00:00:00+08:00">2020年02月26日</time>
+                    <time datetime="2005-04-26T00:00:00+08:00">2005年04月26日</time>
                 </div>
             </div></div><h2 id="test" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
         &nbsp;test&nbsp;(4)
     </h2>
     <div class="post-list"><div class="tag-entry">
-                <a href="/2022-05-26-flt-till-top-sd/">["app"]</a>
+                <a href="/2022-02-26-flake-it-till-you-make-it/">没有分类</a>
                 <div class="entry-date">
-                    <time datetime="2022-05-26T00:00:00+08:00">2022年05月26日</time>
+                    <time datetime="2022-02-26T00:00:00+08:00">2022年02月26日</time>
                 </div>
             </div><div class="tag-entry">
-                <a href="/2020-02-28-test-own%E7%9A%84%E5%89%AF%E6%9C%AC/">["其他"]</a>
+                <a href="/2021-09-28-test-own%E7%9A%84%E5%89%AF%E6%9C%AC/">["其他"]</a>
                 <div class="entry-date">
-                    <time datetime="2020-02-28T00:00:00+08:00">2020年02月28日</time>
+                    <time datetime="2021-09-28T00:00:00+08:00">2021年09月28日</time>
                 </div>
             </div><div class="tag-entry">
                 <a href="/2020-02-28-test-markdown/">["app", "game"]</a>
@@ -365,9 +374,45 @@
                     <time datetime="2020-02-28T00:00:00+08:00">2020年02月28日</time>
                 </div>
             </div><div class="tag-entry">
-                <a href="/2020-02-26-flake-it-till-you-make-it/">没有分类</a>
+                <a href="/2005-04-26-flt-till-top-sd/">["app"]</a>
                 <div class="entry-date">
-                    <time datetime="2020-02-26T00:00:00+08:00">2020年02月26日</time>
+                    <time datetime="2005-04-26T00:00:00+08:00">2005年04月26日</time>
+                </div>
+            </div></div><h2 id="时钟APP" class="linked-section">
+        <i class="fas fa-tag" aria-hidden="true"></i>
+        &nbsp;时钟APP&nbsp;(1)
+    </h2>
+    <div class="post-list"><div class="tag-entry">
+                <a href="/2022-09-10-CreativeClock/">手机上好用的时钟APP推荐</a>
+                <div class="entry-date">
+                    <time datetime="2022-09-10T17:38:00+08:00">2022年09月10日</time>
+                </div>
+            </div></div><h2 id="极简时钟" class="linked-section">
+        <i class="fas fa-tag" aria-hidden="true"></i>
+        &nbsp;极简时钟&nbsp;(1)
+    </h2>
+    <div class="post-list"><div class="tag-entry">
+                <a href="/2022-09-10-CreativeClock/">手机上好用的时钟APP推荐</a>
+                <div class="entry-date">
+                    <time datetime="2022-09-10T17:38:00+08:00">2022年09月10日</time>
+                </div>
+            </div></div><h2 id="翻页时钟" class="linked-section">
+        <i class="fas fa-tag" aria-hidden="true"></i>
+        &nbsp;翻页时钟&nbsp;(1)
+    </h2>
+    <div class="post-list"><div class="tag-entry">
+                <a href="/2022-09-10-CreativeClock/">手机上好用的时钟APP推荐</a>
+                <div class="entry-date">
+                    <time datetime="2022-09-10T17:38:00+08:00">2022年09月10日</time>
+                </div>
+            </div></div><h2 id="酷炫时钟" class="linked-section">
+        <i class="fas fa-tag" aria-hidden="true"></i>
+        &nbsp;酷炫时钟&nbsp;(1)
+    </h2>
+    <div class="post-list"><div class="tag-entry">
+                <a href="/2022-09-10-CreativeClock/">手机上好用的时钟APP推荐</a>
+                <div class="entry-date">
+                    <time datetime="2022-09-10T17:38:00+08:00">2022年09月10日</time>
                 </div>
             </div></div></div>
 

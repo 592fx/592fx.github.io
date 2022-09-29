@@ -1,4 +1,0 @@
-bundle add webrick
-bundle exec jekyll serve
-
-http://www.akuziti.com/

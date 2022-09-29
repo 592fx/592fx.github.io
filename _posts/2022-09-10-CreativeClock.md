@@ -1,9 +1,13 @@
 ---
+layout: post
 title: 手机上好用的时钟APP推荐
 author: huhansome
 date: 2022-09-10 17:38:00 +0800
-categories: [iOS]
+categories: ['app']
 tags: [翻页时钟, 时钟APP, 极简时钟, App Store, 酷炫时钟]
+pin: true
+comments: true
+keywords: 翻页时钟, 时钟APP, 极简时钟, App Store, 酷炫时钟
 ---
 
 
