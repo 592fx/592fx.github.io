@@ -1,20 +1,20 @@
 $(function() {
     //分类事件
     
-    $("[href$='/game']").on("click", function () {
-        consle.log('================');
-        $("[href$='/game']").parent().prev().text("好游戏");
-        window.location.href = "/game";
-        return false;
-    });
-
-    $("[href$='/app']").on('click', function () {
-        
-    });
-    
-    $("[href$='/other']").on('click', function () {
-        
-    });
+//    $("[href$='/game']").on("click", function () {
+//        consle.log('================');
+//        $("[href$='/game']").parent().prev().text("好游戏");
+//        window.location.href = "/game";
+//        return false;
+//    });
+//
+//    $("[href$='/app']").on('click', function () {
+//
+//    });
+//
+//    $("[href$='/other']").on('click', function () {
+//
+//    });
     
   $('#change-skin').on('click', function () {
     $("body").toggleClass("page-dark-mode");
@@ -32,4 +32,15 @@ $(function() {
   if (localStorage.getItem('bj-dark-mode') === 'true') {
     $('#change-skin').trigger('click');
   }
+    
+    
+//    $(function(){
+//        $(".dropdown-menu [href$='/game']").click(function(){
+//            consle.log('================');
+//            $(".dropdown-menu [href$='/game']").parent().prev().text("好游戏");
+//            $(".dropdown-menu [href$='/game']").attr("href","");
+////            window.location.href = "/game";
+//            return false;
+//        });
+//    });
 });
