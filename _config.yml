@@ -25,10 +25,7 @@ author: huhansome
 ###############################################
 
 navbar-links:
-  分类:
-    - 好游戏: "game"
-    - 好应用: "app"
-    - 其他: "other"
+  分类: "tags"
   实惠省钱:
     - 网页版: "http://zmfsr.yhzu.cn"
     - app/小程序: "https://dea.om"
