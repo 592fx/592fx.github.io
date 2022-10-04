@@ -63,13 +63,15 @@ layout: page
       {% assign thumbnail=thumbnail | strip %}
       
 <!--   fix https  -->
-    {%- capture thumbnail1 -%}
-      {% if thumbnail contains 'https' %}
-      {{ thumbnail }}
-      {% else %}
-      https://59ifx.cn/{{ thumbnail }}
-      {% endif %}
-    {% endcapture %}
+        {% if thumbnail != ""  %}
+        {%- capture thumbnail1 -%}
+          {% if thumbnail contains 'https' %}
+          {{ thumbnail }}
+          {% else %}
+          https://59ifx.cn/{{ thumbnail }}
+          {% endif %}
+        {% endcapture %}
+        {% end %}
       
       
       {% assign thumbnail=thumbnail1 | strip %}
