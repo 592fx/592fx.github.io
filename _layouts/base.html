@@ -39,5 +39,18 @@ common-js:
 
   {% include footer-scripts.html %}
 
+  
+  <script>
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", 'https://data.zz.baidu.com/urls?site=https://59ifx.cn&token=33vrSb5WtZ2IIRwL', true);
+      xhr.setRequestHeader("Content-Type", "text/plain");
+
+      xhr.onreadystatechange = function() {
+          if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+          }
+      }
+      var current_url = window.location.href;
+      xhr.send(current_url);
+  </script>
 </body>
 </html>
