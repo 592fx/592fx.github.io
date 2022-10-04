@@ -41,16 +41,18 @@ common-js:
 
   
   <script>
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", 'https://data.zz.baidu.com/urls?site=https://59ifx.cn&token=33vrSb5WtZ2IIRwL', true);
-      xhr.setRequestHeader("Content-Type", "text/plain");
-
-      xhr.onreadystatechange = function() {
-          if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      (function(){
+          var bp = document.createElement('script');
+          var curProtocol = window.location.protocol.split(':')[0];
+          if (curProtocol === 'https') {
+              bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+          } else {
+              bp.src = 'http://push.zhanzhang.baidu.com/push.js';
           }
-      }
-      var current_url = window.location.href;
-      xhr.send(current_url);
+          
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(bp, s);
+      })();
   </script>
 </body>
 </html>
