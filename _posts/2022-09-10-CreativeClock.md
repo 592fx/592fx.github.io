@@ -23,28 +23,118 @@ keywords: 翻页时钟, 时钟APP, 极简时钟, App Store, 酷炫时钟
 
 现在给大家介绍一款时钟APP —— [创意时钟](https://apps.apple.com/cn/app/%E5%88%9B%E6%84%8F%E6%97%B6%E9%92%9F-%E6%9E%81%E7%AE%80%E5%88%9B%E6%84%8F%E6%97%A0%E5%B9%BF%E5%91%8A%E9%99%84%E5%B8%A6%E6%A1%8C%E9%9D%A2%E5%B0%8F%E9%83%A8%E4%BB%B6%E7%BF%BB%E9%A1%B5%E5%85%A8%E5%B1%8F%E6%9E%81%E7%AE%80%E6%97%B6%E9%92%9F/id1643819605)，它包含了翻页时钟，数字时钟，模拟时钟等等多种酷炫的样式，而且还在持续新增更多的酷炫样式时钟，持续的优化视觉效果。整个APP的交互也是精心设计，非常清爽干净，而且无广告。APP支持暗黑模式和亮色模式，切换自如。
 
-翻页时钟最新版是一个界面超级简单醒目的时钟软件，还是会翻页的那种哦。除了极简的风格，还有各种主题的时钟，都可以使用。这个时钟还可以随意根据用户的需求调节大小和尺寸，真的是很贴心了。有需要的朋友可以下载一个哦！！
-[![翻页时钟.png](https://s1.ax1x.com/2022/09/12/vXQ3QK.png)](https://imgse.com/i/vXQ3QK)
+**翻页时钟**最新版是一个界面超级简单醒目的时钟软件，还是会翻页的那种哦。除了极简的风格，还有各种主题的时钟，都可以使用。这个时钟还可以随意根据用户的需求调节大小和尺寸，真的是很贴心了。有需要的朋友可以下载一个哦！！
+<center style="margin-bottom: 40px; margin-top: 20px">
+	<a target="_blank"  href="javascript:void(0)">
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://s1.ax1x.com/2022/09/12/vXQ3QK.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">翻页时钟</div>
+    </a>
+</center>
 
-数字时钟，采用酷炫的动画方式，实现数字切换，每个数字的每个单元都是独立的，数字变化会根绝每个部位来做动画改编数字，效果还是实打实的。
-[![vXQwWt.png](https://s1.ax1x.com/2022/09/12/vXQwWt.png)](https://imgse.com/i/vXQwWt)
 
-贝塞尔曲线时钟，时针分针秒针的移动是贝塞尔曲线形成，效果是非常的酷炫，很有创意的时钟样式
-[![vXQsOS.png](https://s1.ax1x.com/2022/09/12/vXQsOS.png)](https://imgse.com/i/vXQsOS)
+**数字时钟**，采用酷炫的动画方式，实现数字切换，每个数字的每个单元都是独立的，数字变化会根绝每个部位来做动画改编数字，效果还是实打实的。
+<center style="margin-bottom: 40px; margin-top: 20px">
+	<a target="_blank"  href="javascript:void(0)">
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://s1.ax1x.com/2022/09/12/vXQwWt.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">数字时钟</div>
+    </a>
+</center>
+
+
+**贝塞尔曲线时钟**，时针分针秒针的移动是贝塞尔曲线形成，效果是非常的酷炫，很有创意的时钟样式
+<center style="margin-bottom: 40px; margin-top: 20px">
+	<a target="_blank"  href="javascript:void(0)">
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://s1.ax1x.com/2022/09/12/vXQsOS.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">贝塞尔曲线时钟</div>
+    </a>
+</center>
 
 贝塞尔形状时钟，这款时钟也是用贝塞尔曲线实现的，画面会显得流畅柔和，不会很生硬。
-[![vXlJ10.png](https://s1.ax1x.com/2022/09/12/vXlJ10.png)](https://imgse.com/i/vXlJ10)
+<center style="margin-bottom: 40px; margin-top: 20px">
+	<a target="_blank"  href="javascript:void(0)">
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://s1.ax1x.com/2022/09/12/vXlJ10.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">贝塞尔形状时钟</div>
+    </a>
+</center>
 
-表带一样的时钟，像毛毛虫一样的蠕动，效果还是很惊艳，这个时钟样式也是非常简洁，而且创意十足
-[![vXlAfI.png](https://s1.ax1x.com/2022/09/12/vXlAfI.png)](https://imgse.com/i/vXlAfI)
+毛毛虫时钟，像毛毛虫一样的蠕动，效果还是很惊艳，这个时钟样式也是非常简洁，而且创意十足
+<center style="margin-bottom: 40px; margin-top: 20px">
+	<a target="_blank"  href="javascript:void(0)">
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://s1.ax1x.com/2022/09/12/vXlAfI.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">毛毛虫时钟</div>
+    </a>
+</center>
 
 模拟时钟，表盘有一些样式，如果喜欢更简洁的样式，这个也是不错的。
-[![vXlK0g.png](https://s1.ax1x.com/2022/09/12/vXlK0g.png)](https://imgse.com/i/vXlK0g)
+<center style="margin-bottom: 40px; margin-top: 20px">
+	<a target="_blank"  href="javascript:void(0)">
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://s1.ax1x.com/2022/09/12/vXlK0g.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">模拟时钟</div>
+    </a>
+</center>
 
 轮盘时钟，年月日等时间要素形成轮盘，像齿轮一样的转动，效果酷炫，画面也算得上极简。
-[![vXl3hn.png](https://s1.ax1x.com/2022/09/12/vXl3hn.png)](https://imgse.com/i/vXl3hn)
+<center style="margin-bottom: 40px; margin-top: 20px">
+	<a target="_blank"  href="javascript:void(0)">
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://s1.ax1x.com/2022/09/12/vXl3hn.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">轮盘时钟</div>
+    </a>
+</center>
 
 最后还有经典的时钟，polar clock，每个时钟元素都是一个进度条一样的圆环，酷炫时尚。
-[![vXlaBF.png](https://s1.ax1x.com/2022/09/12/vXlaBF.png)](https://imgse.com/i/vXlaBF)
+<center style="margin-bottom: 40px; margin-top: 20px">
+	<a target="_blank"  href="javascript:void(0)">
+    <img style="border-radius: 0.3125em;
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    src="https://s1.ax1x.com/2022/09/12/vXlaBF.png">
+    <br>
+    <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+    display: inline-block;
+    color: #999;
+    padding: 2px;">彩绘时钟</div>
+    </a>
+</center>
 
 以上就是[创意时钟](https://apps.apple.com/cn/app/%E5%88%9B%E6%84%8F%E6%97%B6%E9%92%9F-%E6%9E%81%E7%AE%80%E5%88%9B%E6%84%8F%E6%97%A0%E5%B9%BF%E5%91%8A%E9%99%84%E5%B8%A6%E6%A1%8C%E9%9D%A2%E5%B0%8F%E9%83%A8%E4%BB%B6%E7%BF%BB%E9%A1%B5%E5%85%A8%E5%B1%8F%E6%9E%81%E7%AE%80%E6%97%B6%E9%92%9F/id1643819605) 目前的时钟样式，而且还在持续开发更多的时钟样式，创意时钟旨在打造一款创意酷炫的时钟应用，并且要保留一些极简的风格，让大家拥有更多酷炫的时钟。
