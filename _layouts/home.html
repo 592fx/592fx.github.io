@@ -89,7 +89,7 @@ layout: page
       {% endif %}
       {% endif %}
 
-      <a "my-article-entry" href="{{ post.url | absolute_url }}">
+      <a name="my-article-entry" href="{{ post.url | absolute_url }}">
         <h2 class="post-title">{{ post.title | strip_html }}</h2>
 
 <!--        {% if post.subtitle %}-->
@@ -101,7 +101,7 @@ layout: page
 
       {% if thumbnail != "" %}
       <div class="post-image post-image-small">
-        <a "my-article-entry" href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
+        <a name="my-article-entry" href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
           <img src="{{ thumbnail | absolute_url}}" alt="Post thumbnail">
         </a>
       </div>
@@ -110,7 +110,7 @@ layout: page
       {% unless site.feed_show_excerpt == false %}
       {% if thumbnail != "" %}
       <div class="post-image post-image-short">
-        <a "my-article-entry" href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
+        <a name="my-article-entry" href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
           <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
         </a>
       </div>
