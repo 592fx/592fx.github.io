@@ -14,7 +14,7 @@ title: 我就爱分享
 
 # The keywords to associate with your website, for SEO purposes
 #keywords: "my,list,of,keywords"
-keywords: "我就爱分享, 59ifx, 游戏分享, app分享, 云主机分享, 互联网分享, 精品应用分享, 耐玩的游戏分享, 手机应用分享, 知识分享, huhansome"
+keywords: "我就爱分享, 网络赚钱经验分享, 最新网络兼职分享, huhansome"
 
 # Your name to show in the footer
 author: huhansome
@@ -26,9 +26,9 @@ author: huhansome
 
 navbar-links:
   分类: "tags"
-  实惠省钱:
-    - 网页版: "http://zmfsr.yhzu.cn"
-    - app/小程序: "https://dea.om"
+#  实惠省钱:
+#    - 网页版: "http://zmfsr.yhzu.cn"
+#    - app/小程序: "https://dea.om"
   云服务:
     - 云建站: "https://ac.aliyun.com/application/webdesign/sumei?source=5176.11533457&userCode=j6bryttg"
     - 主机、数据库: "yun"
@@ -87,7 +87,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: 这里有好玩的游戏推荐, 好玩的应用分享以及互联网知识分享
+rss-description: 这里有好玩的游戏推荐, 好玩的应用分享以及网络赚钱经验分享
 
 ###########################
 # --- General options --- #
