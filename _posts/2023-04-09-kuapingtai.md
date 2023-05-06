@@ -8,9 +8,8 @@ tags: [杂谈]
 pin: false
 comments: false
 description:每种跨平台技术都有其优缺点，应根据实际需求选择合适的技术。如果需要开发移动应用，React Native、Flutter和小程序是不错的选择；如果需要开发桌面应用，Electron是一个不错的选择；如果需要开发Web应用，Web技术是一个不错的选择。
-keywords: flutter, Electron, 跨平台技术, ReactNative
+keywords: flutter, Electron, ReactNative, 跨平台技术
 ---
-
 
 跨平台技术指的是一种能够在不同的操作系统、硬件平台或设备上运行的技术。以下是目前比较常用的跨平台技术以及它们的优缺点：
 
