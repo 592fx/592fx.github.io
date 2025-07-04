@@ -10,11 +10,11 @@
 ############################
 
 # Name of website
-title: 我就爱分享
+title: Discover China
 
 # The keywords to associate with your website, for SEO purposes
 #keywords: "my,list,of,keywords"
-keywords: "我就爱分享, 网络赚钱经验分享, 最新网络兼职分享, huhansome"
+keywords: "Chinese Culture, Chinese Landmarks, Chinese Language Learning, huhansome"
 
 # Your name to show in the footer
 author: huhansome
@@ -25,13 +25,13 @@ author: huhansome
 ###############################################
 
 navbar-links:
-  分类: "tags"
+  Category: "tags"
 #  实惠省钱:
 #    - 网页版: "http://zmfsr.yhzu.cn"
 #    - app/小程序: "https://dea.om"
-  云服务:
-    - 云建站: "https://ac.aliyun.com/application/webdesign/sumei?source=5176.11533457&userCode=j6bryttg"
-    - 主机、数据库: "yun"
+#  云服务:
+#    - 云建站: "https://ac.aliyun.com/application/webdesign/sumei?source=5176.11533457&userCode=j6bryttg"
+#    - 主机、数据库: "yun"
     
 ################
 # --- Logo --- #
@@ -56,7 +56,7 @@ navbar-links:
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "hucd_mail@yeah.net"
+  email: "hucdmail@gmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
   facebook: ""
   github: ""
@@ -87,7 +87,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: 这里有好玩的游戏推荐, 好玩的应用分享以及网络赚钱经验分享
+rss-description: Discover China: Culture, Landmarks, and Language Learning
 
 ###########################
 # --- General options --- #
@@ -242,7 +242,7 @@ footer-hover-col: "#0085A1"
 ################
 
 # Ruby Date Format to show dates of posts
-date_format: "%Y年%m月%d日"
+date_format: "%Y-%m-%d"
 
 # Facebook App ID
 #fb_app_id: ""
@@ -252,12 +252,12 @@ date_format: "%Y年%m月%d日"
 #################################################################################
 
 # Output options (more information on Jekyll's site)
-timezone: "Asia/Shanghai"
+timezone: "America/Los_Angeles"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
 paginate: 5
-language: "zh-cn"
+language: "en-us"
 
 kramdown:
   input: GFM
