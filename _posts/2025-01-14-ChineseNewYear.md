@@ -2,7 +2,7 @@
 layout: post
 title: The Magic of Chinese New Year —— Celebrating Harmony, Prosperity, and Renewal
 author: huhansome
-date: 2025-01-13 14:30:00 +0800
+date: 2025-01-14 14:30:00 +0800
 categories: ['Landscapes', 'Landmarks']
 tags: [Festival, Tradition]
 pin: false
