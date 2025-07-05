@@ -2,7 +2,7 @@
 layout: post
 title: Exploring Mount Emei —— A Journey into China's Spiritual and Natural Splendor
 author: huhansome
-date: 2025-01-15 14:30:00 +0800
+date: 2025-01-16 14:30:00 +0800
 categories: ['Landscapes', 'Landmarks']
 tags: [Landscapes, Landmarks]
 pin: false
