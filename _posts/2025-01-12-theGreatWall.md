@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Great Wall of China: A Majestic Legacy and a Must-Visit Destination"
+title: The Great Wall of China: A Majestic Legacy and a Must-Visit Destination
 author: huhansome
 date: 2025-01-12 10:30:00 +0800
 categories: ['Landscapes', 'Landmarks']
