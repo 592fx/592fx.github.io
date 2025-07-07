@@ -4,7 +4,7 @@ title: Exploring Mount Emei —— A Journey into China's Spiritual and Natural 
 author: huhansome
 date: 2025-01-16 14:30:00 +0800
 categories: ['Landscapes', 'Landmarks']
-tags: [Landscapes, Landmarks]
+tags: [Landscapes, Landmarks, Mount]
 pin: false
 comments: true
 description: Mount Emei, one of China's most famous Buddhist mountains, is a place where spirituality meets natural beauty. This blog post delves into the rich history, cultural significance, and breathtaking landscapes of Mount Emei. Discover the ancient temples, lush forests, and stunning views that make this sacred mountain a must-visit destination. Whether you're a spiritual seeker, a nature lover, or an adventure enthusiast, Mount Emei offers a unique and unforgettable experience.
