@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- ============================================================ -->
+    <!--  SEO 优化：TDK 标签                                           -->
+    <!-- ============================================================ -->
+    <title>我的App集 - 精品应用推荐 | 扫码下载iOS/Android</title>
+    <meta name="description" content="发现优质App应用：创意时钟、桌面小组件、翻页时钟、私密相册。简洁优雅的界面，扫码即可下载体验。Discover amazing apps: Inno Clock, flip Clock, ios desktop widgets, pixvault. Scan QR code to download now." />
+    <meta name="keywords" content="App推荐,应用下载,手机应用推荐,桌面小组件,私密相册,极简时钟,白噪音,iOS应用,Android应用,手机软件,精品应用, app recommendation, app download, inno clock, plant识别, note app, music app, white noise, scan QR code, iOS app, Android app, mobile app" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://yourdomain.com/apps" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="我的App集 - 精品应用推荐 | Discover amazing apps" />
+    <meta property="og:description" content="创意时钟、桌面小组件、翻页时钟、私密相册。简洁优雅的界面，扫码即可下载体验。Inno Clock, flip Clock, ios desktop widgets, pixvault — Scan to download." />
+    <meta property="og:type" content="website" />
+	<meta property="og:locale" content="en_US" />
+    <!-- ============================================================ -->
+
+    <!-- Inter 字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- ============================================================ -->
+    <!--  ★ 使用 merger 完全相同的库加载方式                          -->
+    <!--  ★ merger 使用的 CDN: https://cdn.jsdelivr.net/combine/      -->
+    <!-- ============================================================ -->
+    <script src="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/js/jQuery/jquery.min.js,gh/hifocus/merger@0.21.1/assets/js/jquery-qrcode/jquery-qrcode.min.js">
+    </script>
+
+    <style>
+        /* ============================================================ */
+        /*  动态渐变背景 + 浮动光晕                                     */
+        /* ============================================================ */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            background: linear-gradient(135deg, #e8f0fe 0%, #d4e0f0 30%, #c8d8ec 60%, #dce6f2 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 12s ease-in-out infinite alternate;
+            color: #0b1a2e;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 0%;
+            }
+            25% {
+                background-position: 100% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            75% {
+                background-position: 0% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -15%;
+            left: -15%;
+            width: 60%;
+            height: 70%;
+            background: radial-gradient(circle, rgba(120, 180, 255, 0.20) 0%, rgba(120, 180, 255, 0.05) 40%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            animation: floatGlow1 10s ease-in-out infinite alternate;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -15%;
+            right: -15%;
+            width: 55%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(200, 180, 255, 0.18) 0%, rgba(200, 180, 255, 0.05) 40%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            animation: floatGlow2 12s ease-in-out infinite alternate;
+        }
+
+        .bg-glow-3 {
+            position: fixed;
+            top: 30%;
+            right: -5%;
+            width: 40%;
+            height: 50%;
+            background: radial-gradient(circle, rgba(100, 210, 200, 0.10) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            animation: floatGlow3 14s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatGlow1 {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: translate(8%, 6%) scale(1.15);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(3%, 10%) scale(1.05);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes floatGlow2 {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translate(-8%, -6%) scale(1.2);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translate(-5%, -10%) scale(1.1);
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes floatGlow3 {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.3;
+            }
+            100% {
+                transform: translate(-10%, 8%) scale(1.3);
+                opacity: 0.7;
+            }
+        }
+
+        .showcase {
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== 头部 ===== */
+        .header {
+            text-align: center;
+            margin-bottom: 3.2rem;
+            padding: 0 0.5rem;
+        }
+
+        .header .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: #1a2a3a;
+            padding: 0.3rem 1.2rem 0.3rem 1rem;
+            border-radius: 60px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .header .brand-badge i {
+            font-size: 0.9rem;
+            color: #4a7bb5;
+        }
+
+        .header .brand-badge .brand-name {
+            display: inline-block;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2a5f8a, #4a8bc2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #0f263b 0%, #2a5f8a 80%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            margin-bottom: 0.2rem;
+            position: relative;
+        }
+
+        .header h1 .highlight {
+            background: linear-gradient(135deg, #4a8bc2, #2a5f8a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+		.header h1::before {
+            content: '✦';
+            font-size: 1.6rem;
+            color: #8ab4d6;
+            -webkit-text-fill-color: #8ab4d6;
+            opacity: 0.6;
+            margin-right: 6px;
+        }
+		
+        .header h1::after {
+            content: '✦';
+            font-size: 1.6rem;
+            color: #8ab4d6;
+            -webkit-text-fill-color: #8ab4d6;
+            opacity: 0.6;
+            margin-left: 6px;
+        }
+
+        .header .subhead {
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: #4f6b86;
+            letter-spacing: 0.3px;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: inline-block;
+            padding: 0.2rem 1.8rem;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+            margin-top: 0.1rem;
+        }
+
+        .header .subhead i {
+            margin-right: 6px;
+            color: #6f8fb0;
+        }
+
+        /* ===== 卡片网格 ===== */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.2rem;
+            justify-items: center;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+
+        /* ===== 卡片 ===== */
+        .app-card {
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border-radius: 2.2rem;
+            padding: 2rem 1.6rem 1.8rem;
+            width: 100%;
+            max-width: 360px;
+            box-shadow: 0 16px 40px -12px rgba(30, 60, 120, 0.08), 0 2px 16px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.4s cubic-bezier(0.15, 0.75, 0.3, 1.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: visible;
+        }
+
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -30%;
+            width: 180%;
+            height: 80%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(120, 180, 255, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            opacity: 0.6;
+            transition: opacity 0.4s;
+        }
+
+        .app-card:nth-child(1)::before {
+            background: radial-gradient(ellipse at 30% 20%, rgba(100, 180, 255, 0.12) 0%, transparent 70%);
+        }
+        .app-card:nth-child(2)::before {
+            background: radial-gradient(ellipse at 30% 20%, rgba(80, 210, 160, 0.12) 0%, transparent 70%);
+        }
+        .app-card:nth-child(3)::before {
+            background: radial-gradient(ellipse at 30% 20%, rgba(180, 140, 255, 0.12) 0%, transparent 70%);
+        }
+        .app-card:nth-child(4)::before {
+            background: radial-gradient(ellipse at 30% 20%, rgba(255, 160, 120, 0.12) 0%, transparent 70%);
+        }
+
+        .app-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 32px 60px -16px rgba(30, 60, 120, 0.18);
+            background: rgba(255, 255, 255, 0.72);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .app-card:active {
+            transform: scale(0.98);
+        }
+
+        .app-tag {
+            position: absolute;
+            top: 0.8rem;
+            right: 0.8rem;
+            background: linear-gradient(135deg, #4a8bc2, #2a5f8a);
+            color: #ffffff;
+            font-size: 0.55rem;
+            font-weight: 600;
+            padding: 0.15rem 0.6rem;
+            border-radius: 30px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+            z-index: 5;
+            box-shadow: 0 2px 12px rgba(42, 95, 138, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .app-tag i {
+            margin-right: 2px;
+            font-size: 0.5rem;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            box-shadow: 0 10px 24px -8px rgba(30, 60, 100, 0.10);
+            transition: transform 0.3s ease, box-shadow 0.3s;
+            position: relative;
+            z-index: 2;
+            flex-shrink: 0;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 26px;
+        }
+
+        .app-card:hover .app-icon {
+            transform: scale(1.04) translateY(-2px);
+            box-shadow: 0 16px 32px -10px rgba(30, 60, 100, 0.16);
+        }
+
+        .app-name {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.05rem;
+            margin-bottom: 0.1rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .app-name-cn {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: #0b1a2e;
+            line-height: 1.2;
+        }
+
+        .app-name-en {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: #7a94b0;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        .app-desc {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: #5a7a96;
+            line-height: 1.5;
+            margin-top: 0.2rem;
+            margin-bottom: 1.2rem;
+            padding: 0 0.2rem;
+            min-height: 2.4rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ============================================================ */
+        /*  ★ 二维码悬停浮层效果                                        */
+        /* ============================================================ */
+
+        .qr-wrapper {
+            position: relative;
+            z-index: 10;
+            display: inline-block;
+            cursor: default;
+        }
+
+        /* 小二维码显示区域 */
+        .qr-thumb {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 20px;
+            padding: 0.6rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+            min-width: 132px;
+            min-height: 132px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .qr-thumb .qr-code-container {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .qr-thumb .qr-code-container canvas {
+            width: 120px !important;
+            height: 120px !important;
+            display: block !important;
+            border-radius: 14px;
+        }
+
+        /* ★ 悬停浮层 */
+        .qr-popup {
+            position: absolute;
+            bottom: calc(100% + 16px);
+            left: 50%;
+            transform: translateX(-50%) scale(0.92);
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-radius: 24px;
+            padding: 1.4rem 1.4rem 1rem;
+            box-shadow: 0 32px 72px rgba(20, 40, 80, 0.20), 0 8px 24px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.35s cubic-bezier(0.15, 0.75, 0.3, 1.1);
+            z-index: 999;
+            pointer-events: none;
+            min-width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .qr-popup::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 10px solid transparent;
+            border-top-color: rgba(255, 255, 255, 0.96);
+        }
+
+        .qr-wrapper:hover .qr-popup {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) scale(1);
+            pointer-events: auto;
+        }
+
+        .qr-wrapper:hover .qr-thumb {
+            border-color: #8ab4d6;
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 8px 28px rgba(30, 60, 110, 0.08);
+        }
+
+        .qr-popup .qr-big {
+            width: 200px;
+            height: 200px;
+            border-radius: 16px;
+            background: #ffffff;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .qr-popup .qr-big canvas {
+            width: 200px !important;
+            height: 200px !important;
+            display: block !important;
+            border-radius: 16px;
+        }
+
+        .qr-popup .qr-popup-label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #3d6a8e;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-top: 0.2rem;
+        }
+
+        .qr-popup .qr-popup-label i {
+            margin-right: 4px;
+            color: #4a8bc2;
+        }
+
+        .qr-label {
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #3d6a8e;
+            text-transform: uppercase;
+            margin-top: 0.3rem;
+            background: rgba(200, 220, 240, 0.3);
+            backdrop-filter: blur(4px);
+            padding: 0.15rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .qr-label i {
+            margin-right: 4px;
+            color: #4a8bc2;
+            font-size: 0.6rem;
+        }
+
+        .download-hint {
+            margin-top: 0.4rem;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: #6a8aa8;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            justify-content: center;
+            background: rgba(220, 235, 250, 0.3);
+            backdrop-filter: blur(4px);
+            padding: 0.1rem 1.2rem;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .download-hint i {
+            font-size: 0.65rem;
+            color: #4a8bc2;
+        }
+
+        .footer {
+            margin-top: 3.2rem;
+            font-size: 0.8rem;
+            color: #7a94b0;
+            border-top: 1px solid rgba(180, 200, 220, 0.25);
+            padding-top: 1.6rem;
+            text-align: center;
+            letter-spacing: 0.2px;
+            font-weight: 350;
+            width: 100%;
+        }
+
+        .footer .footer-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(4px);
+            padding: 0.15rem 1.2rem 0.15rem 0.8rem;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer .footer-brand i {
+            color: #4a8bc2;
+            opacity: 0.7;
+        }
+
+        .footer .footer-brand .brand-emoji {
+            font-weight: 600;
+            background: linear-gradient(135deg, #2a5f8a, #4a8bc2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ============================================================ */
+        /* ===== 响应式 ===== */
+        /* ============================================================ */
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem 0.6rem 1.5rem;
+            }
+            .header {
+                margin-bottom: 1.8rem;
+            }
+            .header .brand-badge {
+                font-size: 0.6rem;
+                padding: 0.2rem 0.8rem 0.2rem 0.6rem;
+            }
+            .header h1 {
+                font-size: 2.0rem;
+            }
+            .header h1::after {
+                font-size: 1.0rem;
+                margin-left: 4px;
+            }
+            .header .subhead {
+                font-size: 0.8rem;
+                padding: 0.15rem 1.2rem;
+            }
+            .app-grid {
+                gap: 1.4rem;
+            }
+            .app-card {
+                padding: 1.4rem 1rem 1.2rem;
+                border-radius: 1.8rem;
+                max-width: 100%;
+            }
+            .app-tag {
+                font-size: 0.45rem;
+                top: 0.5rem;
+                right: 0.5rem;
+                padding: 0.1rem 0.4rem;
+            }
+            .app-icon {
+                width: 64px;
+                height: 64px;
+                border-radius: 20px;
+                margin-bottom: 0.6rem;
+            }
+            .app-icon img {
+                border-radius: 20px;
+            }
+            .app-name-cn {
+                font-size: 1.3rem;
+            }
+            .app-name-en {
+                font-size: 0.6rem;
+            }
+            .app-desc {
+                font-size: 0.8rem;
+                min-height: 2rem;
+                margin-bottom: 1rem;
+            }
+            .qr-thumb {
+                min-width: 112px;
+                min-height: 112px;
+                padding: 0.4rem;
+                border-radius: 16px;
+            }
+            .qr-thumb .qr-code-container {
+                width: 100px;
+                height: 100px;
+            }
+            .qr-thumb .qr-code-container canvas {
+                width: 100px !important;
+                height: 100px !important;
+            }
+            .qr-popup {
+                min-width: 160px;
+                padding: 0.8rem;
+                bottom: calc(100% + 12px);
+            }
+            .qr-popup .qr-big {
+                width: 140px;
+                height: 140px;
+            }
+            .qr-popup .qr-big canvas {
+                width: 140px !important;
+                height: 140px !important;
+            }
+            .qr-popup .qr-popup-label {
+                font-size: 0.55rem;
+            }
+            .qr-label {
+                font-size: 0.55rem;
+                padding: 0.1rem 0.7rem;
+            }
+            .download-hint {
+                font-size: 0.6rem;
+                padding: 0.05rem 0.8rem;
+                gap: 0.3rem;
+            }
+            .footer {
+                font-size: 0.65rem;
+                margin-top: 2rem;
+                padding-top: 1rem;
+            }
+            .footer .footer-brand {
+                font-size: 0.6rem;
+                padding: 0.1rem 0.8rem 0.1rem 0.5rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            body {
+                padding: 0.6rem 0.4rem 1rem;
+            }
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            .header .subhead {
+                font-size: 0.7rem;
+                padding: 0.1rem 0.8rem;
+            }
+            .header .brand-badge {
+                font-size: 0.5rem;
+                padding: 0.1rem 0.6rem;
+            }
+            .app-card {
+                padding: 1rem 0.7rem 0.9rem;
+                border-radius: 1.4rem;
+            }
+            .app-icon {
+                width: 54px;
+                height: 54px;
+                border-radius: 16px;
+            }
+            .app-icon img {
+                border-radius: 16px;
+            }
+            .app-name-cn {
+                font-size: 1.1rem;
+            }
+            .app-name-en {
+                font-size: 0.55rem;
+            }
+            .app-desc {
+                font-size: 0.7rem;
+                min-height: 1.6rem;
+                margin-bottom: 0.7rem;
+            }
+            .qr-thumb {
+                min-width: 96px;
+                min-height: 96px;
+                padding: 0.3rem;
+                border-radius: 12px;
+            }
+            .qr-thumb .qr-code-container {
+                width: 84px;
+                height: 84px;
+            }
+            .qr-thumb .qr-code-container canvas {
+                width: 84px !important;
+                height: 84px !important;
+            }
+            .qr-popup {
+                min-width: 130px;
+                padding: 0.6rem;
+                bottom: calc(100% + 10px);
+            }
+            .qr-popup .qr-big {
+                width: 110px;
+                height: 110px;
+            }
+            .qr-popup .qr-big canvas {
+                width: 110px !important;
+                height: 110px !important;
+            }
+            .qr-popup .qr-popup-label {
+                font-size: 0.5rem;
+            }
+            .qr-label {
+                font-size: 0.5rem;
+                padding: 0.05rem 0.5rem;
+            }
+            .download-hint {
+                font-size: 0.5rem;
+                padding: 0.05rem 0.6rem;
+            }
+            .footer {
+                font-size: 0.55rem;
+                margin-top: 1.5rem;
+                padding-top: 0.8rem;
+            }
+            .app-tag {
+                font-size: 0.4rem;
+                padding: 0.05rem 0.3rem;
+                top: 0.3rem;
+                right: 0.3rem;
+            }
+        }
+
+        @media (min-width: 481px) and (max-width: 768px) {
+            .app-grid {
+                gap: 1.8rem;
+            }
+            .app-card {
+                max-width: 400px;
+                padding: 1.8rem 1.5rem 1.6rem;
+            }
+            .app-icon {
+                width: 76px;
+                height: 76px;
+            }
+            .qr-thumb .qr-code-container {
+                width: 112px;
+                height: 112px;
+            }
+            .qr-thumb .qr-code-container canvas {
+                width: 112px !important;
+                height: 112px !important;
+            }
+            .qr-popup .qr-big {
+                width: 170px;
+                height: 170px;
+            }
+            .qr-popup .qr-big canvas {
+                width: 170px !important;
+                height: 170px !important;
+            }
+            .header h1 {
+                font-size: 2.4rem;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .app-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+            .app-card {
+                max-width: 340px;
+                padding: 1.8rem 1.4rem 1.6rem;
+            }
+            .header h1 {
+                font-size: 2.6rem;
+            }
+            .showcase {
+                max-width: 900px;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .app-grid {
+                grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+                gap: 2.4rem;
+            }
+            .app-card {
+                max-width: 340px;
+                padding: 2.2rem 1.8rem 2rem;
+            }
+            .header h1 {
+                font-size: 3.2rem;
+            }
+            .showcase {
+                max-width: 1280px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .app-grid {
+                gap: 2.8rem;
+            }
+            .app-card {
+                max-width: 380px;
+                padding: 2.4rem 2rem 2.2rem;
+            }
+            .app-icon {
+                width: 88px;
+                height: 88px;
+            }
+            .qr-thumb .qr-code-container {
+                width: 132px;
+                height: 132px;
+            }
+            .qr-thumb .qr-code-container canvas {
+                width: 132px !important;
+                height: 132px !important;
+            }
+            .qr-popup .qr-big {
+                width: 240px;
+                height: 240px;
+            }
+            .qr-popup .qr-big canvas {
+                width: 240px !important;
+                height: 240px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-glow-3"></div>
+
+    <div class="showcase">
+        <!-- ===== 头部 ===== -->
+        <div class="header">
+            <h1>我的 <span class="highlight">App</span> 集</h1>
+            <div class="subhead">
+                <i class="fas fa-qrcode"></i> 扫码 · 即刻体验
+            </div>
+        </div>
+
+        <!-- ===== App 网格 ===== -->
+        <div class="app-grid">
+            <div class="app-card">
+                <span class="app-tag"><i class="fas fa-certificate"></i> 精选</span>
+                <div class="app-icon">
+                    <img src="/assets/img/innoclock.png" alt="innoclock App 图标" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, #dceaf9, #c2d8ef)'" />
+                </div>
+                <div class="app-name">
+                    <span class="app-name-cn">创意时钟</span>
+                    <span class="app-name-en">Inno Clock</span>
+                </div>
+                <div class="app-desc">优雅的时钟界面 · 桌面小部件</div>
+
+                <div class="qr-wrapper">
+                    <div class="qr-thumb">
+                        <div class="qr-code-container" id="qr-weather-thumb"></div>
+                    </div>
+                    <div class="qr-popup">
+                        <div class="qr-big" id="qr-weather-popup"></div>
+                        <span class="qr-popup-label"><i class="fas fa-qrcode"></i> 扫码下载</span>
+                    </div>
+                </div>
+
+                <span class="qr-label"><i class="fas fa-qrcode"></i> 悬停查看大图</span>
+                <div class="download-hint">
+                    <i class="fas fa-arrow-down"></i> iOS
+                </div>
+            </div>
+
+            <div class="app-card">
+                <span class="app-tag"><i class="fas fa-certificate"></i> 精选</span>
+                <div class="app-icon">
+                    <img src="/assets/img/pixvault.png" alt="植物日记 App 图标" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, #ddf0ea, #c4e2d8)'" />
+                </div>
+                <div class="app-name">
+                    <span class="app-name-cn">私密相册</span>
+                    <span class="app-name-en">PixVault</span>
+                </div>
+                <div class="app-desc">私密相册 · 隐私管家</div>
+
+                <div class="qr-wrapper">
+                    <div class="qr-thumb">
+                        <div class="qr-code-container" id="qr-plant-thumb"></div>
+                    </div>
+                    <div class="qr-popup">
+                        <div class="qr-big" id="qr-plant-popup"></div>
+                        <span class="qr-popup-label"><i class="fas fa-qrcode"></i> 扫码下载</span>
+                    </div>
+                </div>
+
+                <span class="qr-label"><i class="fas fa-qrcode"></i> 悬停查看大图</span>
+                <div class="download-hint">
+                    <i class="fas fa-arrow-down"></i> iOS
+                </div>
+            </div>
+
+            <div class="app-card">
+                <span class="app-tag"><i class="fas fa-certificate"></i> 精选</span>
+                <div class="app-icon">
+                    <img src="/assets/img/flipclock.png" alt="灵感手记 App 图标" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, #ede6f7, #dbd0ed)'" />
+                </div>
+                <div class="app-name">
+                    <span class="app-name-cn">翻页时钟</span>
+                    <span class="app-name-en">Flip Clock</span>
+                </div>
+                <div class="app-desc">沉浸式全屏时钟 · 极简体验</div>
+
+                <div class="qr-wrapper">
+                    <div class="qr-thumb">
+                        <div class="qr-code-container" id="qr-note-thumb"></div>
+                    </div>
+                    <div class="qr-popup">
+                        <div class="qr-big" id="qr-note-popup"></div>
+                        <span class="qr-popup-label"><i class="fas fa-qrcode"></i> 扫码下载</span>
+                    </div>
+                </div>
+
+                <span class="qr-label"><i class="fas fa-qrcode"></i> 悬停查看大图</span>
+                <div class="download-hint">
+                    <i class="fas fa-arrow-down"></i> iOS 
+                </div>
+            </div>
+
+            <!-- <div class="app-card">
+                <span class="app-tag"><i class="fas fa-certificate"></i> 精选</span>
+                <div class="app-icon">
+                    <img src="icons/music.png" alt="音律岛 App 图标" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, #faeae5, #f2d5ce)'" />
+                </div>
+                <div class="app-name">
+                    <span class="app-name-cn">音律岛</span>
+                    <span class="app-name-en">Melody Island</span>
+                </div>
+                <div class="app-desc">专注音乐 · 白噪音</div>
+
+                <div class="qr-wrapper">
+                    <div class="qr-thumb">
+                        <div class="qr-code-container" id="qr-music-thumb"></div>
+                    </div>
+                    <div class="qr-popup">
+                        <div class="qr-big" id="qr-music-popup"></div>
+                        <span class="qr-popup-label"><i class="fas fa-qrcode"></i> 扫码下载</span>
+                    </div>
+                </div>
+
+                <span class="qr-label"><i class="fas fa-qrcode"></i> 悬停查看大图</span>
+                <div class="download-hint">
+                    <i class="fas fa-arrow-down"></i> iOS · Android
+                </div>
+            </div> -->
+        </div>
+
+        <!-- ===== 页脚 ===== -->
+        <div class="footer">
+			 <div class="sponsors" style="align-items: center;
+            gap: 0.5rem;
+          
+            backdrop-filter: blur(4px);
+            padding: 0.15rem 1.2rem 0.15rem 0.8rem;
+            width: fit-content;height: auto;margin: 0 auto; margin-bottom: 0.15rem;">
+			    Sponsors:&nbsp;&nbsp;
+			    <a href="/merger.html" target="_blank">Buy Me a Coffee</a>
+			</div>
+				  
+            <div class="footer-brand">
+                <i class="fas fa-star"></i>
+                <span>由 <span class="brand-emoji">hxr</span> 出品 · 精品应用集</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!--  ★ JavaScript：              -->
+    <!-- ============================================================ -->
+    <script>
+        // ★ 二维码数据
+        var appData = [{
+            id: 'innoclock',
+            name: '创意时钟',
+            url: 'https://apps.apple.com/app/id1643819605'
+        }, {
+            id: 'pixvault',
+            name: '私密相册',
+            url: 'https://apps.apple.com/app/id6788408711'
+        }, {
+            id: 'flipclock',
+            name: '翻页时钟',
+            url: 'https://apps.apple.com/app/id6443968056'
+        }];
+
+        // ★ 等待 jQuery 和 qrcode 插件加载完成
+        function generateAllQRCodes() {
+            // 检查 qrcode 插件是否可用
+            if (typeof $.fn.qrcode !== 'function') {
+                setTimeout(generateAllQRCodes, 300);
+                return;
+            }
+
+            appData.forEach(function(item) {
+                // 缩略图 120px
+                var thumbSelector = '#qr-' + item.id + '-thumb';
+                var thumbContainer = $(thumbSelector);
+                if (thumbContainer.length) {
+                    thumbContainer.empty();
+                    thumbContainer.qrcode({
+                        render: 'canvas',
+                        width: 120,
+                        height: 120,
+                        text: item.url,
+                        typeNumber: 10,
+                        correctLevel: 3,
+                        background: '#ffffff',
+                        foreground: '#1a3a5a'
+                    });
+                    thumbContainer.find('canvas').css({
+                        'width': '120px',
+                        'height': '120px',
+                        'border-radius': '14px',
+                        'display': 'block'
+                    });
+                }
+
+                // 大图 200px
+                var popupSelector = '#qr-' + item.id + '-popup';
+                var popupContainer = $(popupSelector);
+                if (popupContainer.length) {
+                    popupContainer.empty();
+                    popupContainer.qrcode({
+                        render: 'canvas',
+                        width: 200,
+                        height: 200,
+                        text: item.url,
+                        typeNumber: 10,
+                        correctLevel: 3,
+                        background: '#ffffff',
+                        foreground: '#1a3a5a'
+                    });
+                    popupContainer.find('canvas').css({
+                        'width': '200px',
+                        'height': '200px',
+                        'border-radius': '16px',
+                        'display': 'block'
+                    });
+                }
+            });
+        }
+
+        // ★ DOM 加载完成后生成
+        $(document).ready(function() {
+            // 延迟 200ms 确保所有库加载完成
+            setTimeout(generateAllQRCodes, 200);
+        });
+
+        // ★ 备用：window load
+        $(window).on('load', function() {
+            var hasQR = $('.qr-code-container canvas').length > 0;
+            if (!hasQR) {
+                generateAllQRCodes();
+            }
+        });
+
+    </script>
+
+</body>
+</html>
