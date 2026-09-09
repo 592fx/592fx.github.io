@@ -26,6 +26,7 @@ author: huhansome
 
 navbar-links:
   Category: "tags"
+  Amazing Apps: "./products.html"
 #  实惠省钱:
 #    - 网页版: "http://zmfsr.yhzu.cn"
 #    - app/小程序: "https://dea.om"
