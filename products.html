@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>我的App集 - 精品应用推荐 | 扫码下载iOS/Android</title>
+<meta name="description" content="发现优质App应用：创意时钟、桌面小组件、翻页时钟、私密相册。简洁优雅的界面，扫码即可下载体验。Discover amazing apps: Inno Clock, flip Clock, ios desktop widgets, pixvault. Scan QR code to download now." />
+<meta name="keywords" content="App推荐,应用下载,手机应用推荐,桌面小组件,私密相册,极简时钟,iOS应用,Android应用,手机软件,精品应用, app recommendation, app download, inno clock, note app, white noise, scan QR code, iOS app, Android app, mobile app" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://yourdomain.com/apps" />
+<meta property="og:title" content="我的App集 - 精品应用推荐 | Discover amazing apps" />
+<meta property="og:description" content="创意时钟、桌面小组件、翻页时钟、私密相册。简洁优雅的界面，扫码即可下载体验。Inno Clock, flip Clock, ios desktop widgets, pixvault — Scan to download." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+<script src="https://cdn.jsdelivr.net/combine/gh/hifocus/merger@0.21.1/assets/js/jQuery/jquery.min.js,gh/hifocus/merger@0.21.1/assets/js/jquery-qrcode/jquery-qrcode.min.js"></script>
+
+<style>
+/* ============================================================
+   全局重置 —— 保持简单，绝不给 html / body 设置
+   min-height、display:flex、overflow-y 等可能干扰滚动的属性
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+               'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  color: #0b1a2e;
+  background: #e8f0fe;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  /* ❌ 不要 flex，不要 min-height，不要 overflow-y —— 交给浏览器默认文档流 */
+  /* ✅ 只有横向溢出才锁一下 */
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+button {
+  font: inherit; color: inherit; border: 0; background: none;
+  padding: 0; margin: 0; cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ============================================================
+   固定背景层（position: fixed 不占文档流，不影响滚动）
+   ============================================================ */
+.bg-layer {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  background: linear-gradient(135deg, #e8f0fe 0%, #d4e0f0 30%, #c8d8ec 60%, #dce6f2 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease-in-out infinite alternate;
+}
+.glow { position: absolute; border-radius: 50%; }
+
+.glow-1 {
+  top: -15%; left: -15%; width: 70%; height: 60%;
+  background: radial-gradient(circle, rgba(120,180,255,.22) 0%, rgba(120,180,255,.06) 40%, transparent 70%);
+  animation: floatGlow1 10s ease-in-out infinite alternate;
+}
+.glow-2 {
+  bottom: -15%; right: -15%; width: 65%; height: 55%;
+  background: radial-gradient(circle, rgba(200,180,255,.20) 0%, rgba(200,180,255,.06) 40%, transparent 70%);
+  animation: floatGlow2 12s ease-in-out infinite alternate;
+}
+.glow-3 {
+  top: 30%; right: -10%; width: 50%; height: 45%;
+  background: radial-gradient(circle, rgba(100,210,200,.12) 0%, transparent 70%);
+  animation: floatGlow3 14s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 0%; }
+  25%  { background-position: 100% 0%; }
+  50%  { background-position: 100% 100%; }
+  75%  { background-position: 0% 100%; }
+  100% { background-position: 0% 0%; }
+}
+@keyframes floatGlow1 {
+  0%   { transform: translate(0,0) scale(1);       opacity: .6; }
+  50%  { transform: translate(8%,6%) scale(1.15);  opacity: 1;  }
+  100% { transform: translate(3%,10%) scale(1.05); opacity: .8; }
+}
+@keyframes floatGlow2 {
+  0%   { transform: translate(0,0) scale(1);        opacity: .5; }
+  50%  { transform: translate(-8%,-6%) scale(1.2);  opacity: .9; }
+  100% { transform: translate(-5%,-10%) scale(1.1); opacity: .7; }
+}
+@keyframes floatGlow3 {
+  0%   { transform: translate(0,0) scale(1);        opacity: .3; }
+  100% { transform: translate(-10%,8%) scale(1.3);  opacity: .7; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bg-layer, .glow { animation: none !important; }
+}
+
+/* ============================================================
+   主容器：居中 + 内边距 + 底部安全区
+   由它自己撑开高度，body 不限制高度
+   ============================================================ */
+.showcase {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: clamp(1.2rem, 4vw, 2rem);
+  padding-left: calc(clamp(0.8rem, 3vw, 1.2rem) + env(safe-area-inset-left, 0px));
+  padding-right: calc(clamp(0.8rem, 3vw, 1.2rem) + env(safe-area-inset-right, 0px));
+  /* ★ 关键：底部 padding 足够大 + 安全区，保证最后一张卡片 & 页脚完全露出 */
+  padding-bottom: calc(clamp(2.5rem, 8vw, 4rem) + env(safe-area-inset-bottom, 0px));
+}
+
+/* ============================================================
+   头部
+   ============================================================ */
+.header {
+  text-align: center;
+  margin-bottom: clamp(1.6rem, 5vw, 3.2rem);
+  padding: 0 0.5rem;
+}
+.header h1 {
+  display: inline-block;
+  margin: 0 0 0.55rem;
+  font-size: clamp(1.7rem, 7.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #0f263b 0%, #2a5f8a 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header h1 .highlight {
+  background: linear-gradient(135deg, #4a8bc2, #2a5f8a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.header h1::before,
+.header h1::after {
+  content: '✦';
+  font-size: clamp(0.75rem, 3vw, 1.6rem);
+  color: #8ab4d6;
+  -webkit-text-fill-color: #8ab4d6;
+  opacity: .6;
+  vertical-align: middle;
+}
+.header h1::before { margin-right: 6px; }
+.header h1::after  { margin-left: 6px; }
+
+.header .subhead {
+  display: inline-block;
+  font-size: clamp(0.68rem, 3vw, 1.05rem);
+  font-weight: 400;
+  color: #4f6b86;
+  letter-spacing: .3px;
+  background: rgba(255,255,255,.4);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  padding: 0.28rem 1.4rem;
+  border-radius: 60px;
+  border: 1px solid rgba(255,255,255,.6);
+  box-shadow: 0 2px 12px rgba(0,0,0,.02);
+}
+.header .subhead i { margin-right: 6px; color: #6f8fb0; }
+
+/* ============================================================
+   卡片网格
+   ============================================================ */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: clamp(1rem, 3vw, 2.2rem);
+  justify-items: center;
+  width: 100%;
+}
+
+.app-card {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(1.1rem, 4vw, 2rem) clamp(0.9rem, 3.5vw, 1.7rem);
+  border-radius: clamp(1.2rem, 4vw, 2.2rem);
+  background: rgba(255,255,255,.55);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255,255,255,.6);
+  box-shadow: 0 16px 40px -12px rgba(30,60,120,.08), 0 2px 16px rgba(0,0,0,.02);
+  transition: transform .35s cubic-bezier(.15,.75,.3,1.1),
+              box-shadow .35s ease,
+              background .35s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .app-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,.72);
+    box-shadow: 0 32px 60px -16px rgba(30,60,120,.18);
+  }
+}
+
+.app-tag {
+  position: absolute;
+  top: .7rem;
+  right: .7rem;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: clamp(.5rem, 2vw, .58rem);
+  font-weight: 600;
+  letter-spacing: .3px;
+  color: #fff;
+  padding: .15rem .6rem;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #4a8bc2, #2a5f8a);
+  box-shadow: 0 2px 12px rgba(42,95,138,.25);
+  border: 1px solid rgba(255,255,255,.2);
+}
+.app-tag i { font-size: .85em; }
+
+.app-icon {
+  width: clamp(58px, 17vw, 82px);
+  height: clamp(58px, 17vw, 82px);
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: clamp(.5rem, 2vw, 1rem);
+  border-radius: clamp(16px, 5vw, 26px);
+  background: rgba(255,255,255,.5);
+  box-shadow: 0 10px 24px -8px rgba(30,60,100,.10);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.app-icon img { width: 100%; height: 100%; object-fit: contain; border-radius: inherit; }
+@media (hover: hover) and (pointer: fine) {
+  .app-card:hover .app-icon {
+    transform: scale(1.04) translateY(-2px);
+    box-shadow: 0 16px 32px -10px rgba(30,60,100,.16);
+  }
+}
+
+.app-name { display: flex; flex-direction: column; align-items: center; gap: .05rem; }
+.app-name-cn {
+  font-size: clamp(1.05rem, 4.6vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #0b1a2e;
+}
+.app-name-en {
+  font-size: clamp(.55rem, 2.4vw, .7rem);
+  font-weight: 400;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  color: #7a94b0;
+}
+
+.app-desc {
+  margin: .25rem 0 clamp(.7rem, 3vw, 1.2rem);
+  font-size: clamp(.7rem, 3vw, .85rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: #5a7a96;
+  padding: 0 .2rem;
+}
+
+/* ============================================================
+   二维码缩略按钮
+   ============================================================ */
+.qr-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(112px, 32vw, 140px);
+  height: clamp(112px, 32vw, 140px);
+  padding: 8px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(255,255,255,.75);
+  box-shadow: 0 4px 20px rgba(0,0,0,.03);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
+}
+.qr-thumb canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  border-radius: 12px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .qr-thumb:hover {
+    border-color: #8ab4d6;
+    background: rgba(255,255,255,.9);
+    box-shadow: 0 8px 28px rgba(30,60,110,.10);
+  }
+}
+.qr-thumb:active { transform: scale(.95); }
+
+.qr-label {
+  display: inline-block;
+  margin-top: .55rem;
+  font-size: clamp(.55rem, 2.3vw, .65rem);
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #3d6a8e;
+  padding: .18rem .9rem;
+  border-radius: 40px;
+  background: rgba(200,220,240,.35);
+  border: 1px solid rgba(255,255,255,.35);
+}
+.qr-label i { margin-right: 4px; color: #4a8bc2; font-size: .9em; }
+
+.download-hint {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+  margin-top: .45rem;
+  font-size: clamp(.58rem, 2.4vw, .7rem);
+  font-weight: 400;
+  color: #6a8aa8;
+  padding: .15rem 1rem;
+  border-radius: 40px;
+  background: rgba(220,235,250,.35);
+  border: 1px solid rgba(255,255,255,.25);
+}
+.download-hint i { font-size: .9em; color: #4a8bc2; }
+
+/* ============================================================
+   二维码大图弹窗
+   ★ 关键修复：默认 pointer-events:none，只有打开时才 auto
+   ============================================================ */
+.qr-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;               /* ★ 隐藏时绝不拦截任何触摸 */
+  transition: opacity .25s ease, visibility .25s ease;
+}
+.qr-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;               /* ★ 只有打开时才拦截 */
+}
+
+.qr-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10,25,45,.45);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+.qr-modal__card {
+  position: relative;
+  z-index: 1;
+  width: min(86vw, 320px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  padding: 1.6rem 1.6rem 1.3rem;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 30px 80px rgba(10,30,60,.30);
+  transform: scale(.9);
+  transition: transform .28s cubic-bezier(.15,.75,.3,1.15);
+}
+.qr-modal.is-open .qr-modal__card { transform: scale(1); }
+
+.qr-modal__close {
+  position: absolute;
+  top: .6rem;
+  right: .6rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #7a94b0;
+  border-radius: 50%;
+  background: rgba(235,242,250,.9);
+  transition: background .2s ease, color .2s ease;
+}
+.qr-modal__close:active { background: #dbe7f4; color: #2a5f8a; }
+
+.qr-modal__code {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qr-modal__code canvas {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  border-radius: 14px;
+}
+
+.qr-modal__name {
+  font-size: .95rem;
+  font-weight: 600;
+  color: #0b1a2e;
+  letter-spacing: -.01em;
+}
+.qr-modal__tip {
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #3d6a8e;
+  background: rgba(200,220,240,.35);
+  padding: .18rem 1rem;
+  border-radius: 40px;
+}
+.qr-modal__tip i { margin-right: 4px; color: #4a8bc2; }
+
+/* ============================================================
+   页脚
+   ============================================================ */
+.footer {
+  width: 100%;
+  margin-top: clamp(2rem, 7vw, 3.2rem);
+  padding-top: clamp(1rem, 3vw, 1.6rem);
+  border-top: 1px solid rgba(180,200,220,.28);
+  text-align: center;
+  font-size: clamp(.6rem, 2.5vw, .8rem);
+  font-weight: 350;
+  letter-spacing: .2px;
+  color: #7a94b0;
+}
+.footer .sponsors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto .45rem;
+  padding: .18rem 1rem;
+  border-radius: 40px;
+  background: rgba(255,255,255,.25);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.footer .sponsors a { color: #4a8bc2; text-decoration: none; font-weight: 500; }
+.footer .sponsors a:hover { text-decoration: underline; }
+
+.footer .footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  max-width: 100%;
+  padding: .18rem 1.1rem .18rem .8rem;
+  border-radius: 40px;
+  background: rgba(255,255,255,.25);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,.2);
+}
+.footer .footer-brand i { color: #4a8bc2; opacity: .7; }
+.footer .footer-brand .brand-emoji {
+  font-weight: 600;
+  background: linear-gradient(135deg, #2a5f8a, #4a8bc2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============================================================
+   小屏微调
+   ============================================================ */
+@media (max-width: 380px) {
+  .app-grid { gap: .8rem; }
+  .app-card { max-width: 300px; }
+  .qr-thumb { width: 108px; height: 108px; padding: 7px; border-radius: 16px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 固定背景层 -->
+<div class="bg-layer" aria-hidden="true">
+  <span class="glow glow-1"></span>
+  <span class="glow glow-2"></span>
+  <span class="glow glow-3"></span>
+</div>
+
+<div class="showcase">
+
+  <!-- ===== 头部 ===== -->
+  <header class="header">
+    <h1>我的 <span class="highlight">App</span> 集</h1>
+    <div class="subhead"><i class="fas fa-qrcode"></i> 扫码 · 即刻体验</div>
+  </header>
+
+  <!-- ===== App 网格 ===== -->
+  <div class="app-grid">
+
+    <article class="app-card">
+      <span class="app-tag"><i class="fas fa-certificate"></i> 精选</span>
+      <div class="app-icon">
+        <img src="/assets/img/innoclock.png" alt="Inno Clock 应用图标" loading="lazy" decoding="async"
+             onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#dceaf9,#c2d8ef)'" />
+      </div>
+      <div class="app-name">
+        <span class="app-name-cn">创意时钟</span>
+        <span class="app-name-en">Inno Clock</span>
+      </div>
+      <p class="app-desc">优雅的时钟界面 · 桌面小部件</p>
+      <button type="button" class="qr-thumb" id="qr-innoclock-thumb" data-app="innoclock"
+              aria-label="查看创意时钟下载二维码"></button>
+      <span class="qr-label"><i class="fas fa-qrcode"></i> 点击查看大图</span>
+      <span class="download-hint"><i class="fab fa-apple"></i> iOS</span>
+    </article>
+
+    <article class="app-card">
+      <span class="app-tag"><i class="fas fa-certificate"></i> 精选</span>
+      <div class="app-icon">
+        <img src="/assets/img/pixvault.png" alt="PixVault 应用图标" loading="lazy" decoding="async"
+             onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#ddf0ea,#c4e2d8)'" />
+      </div>
+      <div class="app-name">
+        <span class="app-name-cn">私密相册</span>
+        <span class="app-name-en">PixVault</span>
+      </div>
+      <p class="app-desc">私密相册 · 隐私管家</p>
+      <button type="button" class="qr-thumb" id="qr-pixvault-thumb" data-app="pixvault"
+              aria-label="查看私密相册下载二维码"></button>
+      <span class="qr-label"><i class="fas fa-qrcode"></i> 点击查看大图</span>
+      <span class="download-hint"><i class="fab fa-apple"></i> iOS</span>
+    </article>
+
+    <article class="app-card">
+      <span class="app-tag"><i class="fas fa-certificate"></i> 精选</span>
+      <div class="app-icon">
+        <img src="/assets/img/flipclock.png" alt="Flip Clock 应用图标" loading="lazy" decoding="async"
+             onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#ede6f7,#dbd0ed)'" />
+      </div>
+      <div class="app-name">
+        <span class="app-name-cn">翻页时钟</span>
+        <span class="app-name-en">Flip Clock</span>
+      </div>
+      <p class="app-desc">沉浸式全屏时钟 · 极简体验</p>
+      <button type="button" class="qr-thumb" id="qr-flipclock-thumb" data-app="flipclock"
+              aria-label="查看翻页时钟下载二维码"></button>
+      <span class="qr-label"><i class="fas fa-qrcode"></i> 点击查看大图</span>
+      <span class="download-hint"><i class="fab fa-apple"></i> iOS</span>
+    </article>
+
+  </div>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="footer">
+    <div class="sponsors">
+      Sponsors:&nbsp;
+      <a href="/merger.html" target="_blank" rel="noopener">Buy Me a Coffee</a>
+    </div>
+    <div class="footer-brand">
+      <i class="fas fa-star"></i>
+      <span>由 <span class="brand-emoji">hxr</span> 出品 · 精品应用集</span>
+    </div>
+  </footer>
+
+</div>
+
+<!-- ===== 二维码大图弹窗 ===== -->
+<div class="qr-modal" id="qrModal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="下载二维码">
+  <div class="qr-modal__backdrop" data-close></div>
+  <div class="qr-modal__card">
+    <button type="button" class="qr-modal__close" data-close aria-label="关闭">&times;</button>
+    <div class="qr-modal__code" id="qrModalCode"></div>
+    <div class="qr-modal__name" id="qrModalName"></div>
+    <div class="qr-modal__tip"><i class="fas fa-qrcode"></i> 扫码下载</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var appData = [
+    { id: 'innoclock', name: '创意时钟', url: 'https://apps.apple.com/app/id1643819605' },
+    { id: 'pixvault',  name: '私密相册', url: 'https://apps.apple.com/app/id6788408711' },
+    { id: 'flipclock', name: '翻页时钟', url: 'https://apps.apple.com/app/id6443968056' }
+  ];
+
+  function getApp(id) {
+    for (var i = 0; i < appData.length; i++) if (appData[i].id === id) return appData[i];
+    return null;
+  }
+
+  /* ---------- 生成二维码 ---------- */
+  function makeQR($el, size, text) {
+    if (!$el || !$el.length || typeof $.fn.qrcode !== 'function') return;
+    $el.empty();
+    $el.qrcode({
+      render: 'canvas',
+      width: size,
+      height: size,
+      text: text,
+      typeNumber: 8,        // 模块大小适中，摄像头好识别
+      correctLevel: 2,      // 纠错等级 M
+      background: '#ffffff',
+      foreground: '#1a3a5a'
+    });
+  }
+
+  /* ---------- 初始化缩略二维码（带重试，防 CDN 慢） ---------- */
+  $(function () {
+    var inited = false;
+    function tryInit() {
+      if (inited) return true;
+      if (typeof window.jQuery === 'undefined' || typeof jQuery.fn.qrcode !== 'function') return false;
+      inited = true;
+      for (var i = 0; i < appData.length; i++) {
+        var el = document.getElementById('qr-' + appData[i].id + '-thumb');
+        if (el) makeQR($(el), 300, appData[i].url); // 用 300 渲染再缩放，显示更清晰
+      }
+      return true;
+    }
+    if (tryInit()) return;
+    var tries = 0;
+    var timer = setInterval(function () {
+      tries++;
+      if (tryInit() || tries > 25) clearInterval(timer);
+    }, 200);
+  });
+
+  /* ---------- 弹窗 ---------- */
+  var $modal     = $('#qrModal');
+  var $modalCode = $('#qrModalCode');
+  var $modalName = $('#qrModalName');
+
+  function openModal(app) {
+    makeQR($modalCode, 300, app.url);
+    $modalName.text(app.name);
+    $modal.addClass('is-open').attr('aria-hidden', 'false');
+    // 锁定背景滚动（iOS 需要同时锁 body 和 html）
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    $modal.removeClass('is-open').attr('aria-hidden', 'true');
+    // 恢复滚动，且清掉内联样式
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
+  }
+
+  /* 点击缩略二维码打开 */
+  $(document).on('click', '.qr-thumb', function (e) {
+    e.preventDefault();
+    var app = getApp($(this).data('app'));
+    if (app) openModal(app);
+  });
+
+  /* 关闭 */
+  $(document).on('click', '[data-close]', closeModal);
+
+  /* ESC */
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape' || e.keyCode === 27) closeModal();
+  });
+
+  /* 旋转屏幕：若弹窗没开，确保滚动是解锁状态 */
+  window.addEventListener('orientationchange', function () {
+    if (!$modal.hasClass('is-open')) {
+      document.body.style.overflow = '';
+      document.documentElement.style.overflow = '';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
