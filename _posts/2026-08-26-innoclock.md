@@ -1,6 +1,6 @@
 ---
 layout: post
-title: InnoClock Review: Minimalist, Ad-Free Clock App with Widgets and Flip Clock for iOS
+title: InnoClock Review - Minimalist, Ad-Free Clock App with Widgets and Flip Clock for iOS
 author: huhansome
 date: 2026-08-26 14:30:00 +0800
 categories: ['Apps']
