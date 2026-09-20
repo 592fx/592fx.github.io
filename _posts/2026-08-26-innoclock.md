@@ -11,7 +11,7 @@ description: Tired of the same boring digital numbers staring back at you every 
 keywords: Inno clock,homescreenclock, clockwidget,digital clock,analog clock,flip clock,aesthetic clock,transparentwidget,3d clock,Minimalist clock,transparent
 ---
 
-![](./assets/img/404-southpark.jpg)
+![](./assets/img/234.PNG)
 
 If you're looking for a minimalist, ad-free clock app that also works as a home screen widget, Creative Clock is worth a try.
 
