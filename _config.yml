@@ -27,6 +27,7 @@ author: huhansome
 navbar-links:
   Category: "tags"
   Amazing Apps: "./products.html"
+  zenith fork: "https://zenith-fork.github.io"
 #  实惠省钱:
 #    - 网页版: "http://zmfsr.yhzu.cn"
 #    - app/小程序: "https://dea.om"

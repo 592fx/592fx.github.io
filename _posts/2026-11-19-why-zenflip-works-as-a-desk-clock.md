@@ -2,7 +2,7 @@
 layout: post
 title: "Why ZenFlip Makes a Good Desk Clock for iPhone and iPad"
 author: huhansome
-date: 2026-11-25 11:00:00 +0800
+date: 2026-11-19 11:00:00 +0800
 categories: ['Apps']
 tags: [Apps, Desk Clock, Flip Clock, iPhone, iPad]
 description: "A closer look at ZenFlip's full-screen design, adaptive layout, simple gestures, and retro flip animation for desk and bedside use."
