@@ -1,0 +1,76 @@
+---
+layout: page
+title: About
+subtitle: Independent software, thoughtful craft.
+description: Meet an independent developer creating useful apps and the founder of Zenith Fork Studio, a studio devoted to handcrafted solid-wood slingshots.
+permalink: /about.html
+---
+
+<style>
+.about-page { --ink:#203044; --muted:#5c6d7e; --blue:#28669b; color:var(--ink); padding-bottom:3rem; }
+.about-page * { box-sizing:border-box; }
+.about-page a { text-decoration:none; }
+.about-hero { position:relative; overflow:hidden; padding:clamp(2rem,5vw,4rem); border-radius:28px; background:linear-gradient(125deg,#edf6fb 0%,#f6f8f3 65%,#e8efe7 100%); box-shadow:0 18px 48px rgba(29,61,79,.09); }
+.about-hero:after { content:""; position:absolute; width:260px; height:260px; right:-70px; top:-90px; border-radius:50%; background:rgba(112,166,182,.13); }
+.about-eyebrow { text-transform:uppercase; letter-spacing:.18em; font-size:.78rem; font-weight:700; color:var(--blue); }
+.about-hero h2 { max-width:650px; margin:.6rem 0 1rem; font-size:clamp(2.1rem,5vw,3.7rem); line-height:1.12; letter-spacing:-.045em; }
+.about-hero p { max-width:620px; margin:0; color:var(--muted); font-size:1.1rem; line-height:1.8; }
+.about-actions { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.8rem; }
+.about-button { display:inline-flex; align-items:center; justify-content:center; padding:.78rem 1.25rem; border-radius:999px; font-weight:700; transition:transform .2s,box-shadow .2s; }
+.about-button:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(29,61,79,.13); }
+.about-button-primary { color:#fff !important; background:#245c86; }
+.about-button-secondary { color:#245c86 !important; background:#fff; border:1px solid #dce8ed; }
+.about-section { margin-top:3rem; }
+.about-section h2 { font-size:1.7rem; letter-spacing:-.03em; margin:0 0 .7rem; }
+.about-section > p { color:var(--muted); line-height:1.8; max-width:680px; }
+.about-apps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:1.5rem; }
+.about-app { display:flex; align-items:center; gap:.9rem; min-height:100px; padding:1rem; border:1px solid #e5edf1; border-radius:18px; background:#fff; color:var(--ink) !important; box-shadow:0 8px 25px rgba(24,55,74,.04); }
+.about-app:hover { border-color:#8fb7d1; }
+.about-app img { width:56px; height:56px; border-radius:14px; object-fit:cover; flex:none; }
+.about-app strong { display:block; font-size:.98rem; }
+.about-app small { display:block; color:var(--muted); line-height:1.4; margin-top:.2rem; }
+.about-studio { display:grid; grid-template-columns:1fr 1fr; overflow:hidden; margin-top:3rem; border-radius:24px; background:#22362f; color:#fff; }
+.about-studio img { width:100%; height:100%; min-height:290px; object-fit:cover; }
+.about-studio-copy { align-self:center; padding:clamp(1.6rem,4vw,3rem); }
+.about-studio-copy .about-eyebrow { color:#b9d7bf; }
+.about-studio-copy h2 { margin:.6rem 0 1rem; font-size:clamp(1.7rem,3vw,2.5rem); line-height:1.2; }
+.about-studio-copy p { color:#d8e5dc; line-height:1.8; }
+.about-studio-copy a { color:#fff; font-weight:700; border-bottom:1px solid #a8c7b0; }
+@media(max-width:800px) { .about-apps { grid-template-columns:repeat(2,minmax(0,1fr)); } .about-studio { grid-template-columns:1fr; } }
+@media(max-width:520px) { .about-apps { grid-template-columns:1fr; } .about-hero { border-radius:20px; } }
+</style>
+
+<div class="about-page">
+  <section class="about-hero" aria-labelledby="about-intro">
+    <span class="about-eyebrow">Hello, I'm an independent developer</span>
+    <h2 id="about-intro">Building useful apps.<br>Making room for craft.</h2>
+    <p>I create focused apps that make everyday moments a little better—from clocks with character to tools for habits, privacy, and play. I keep designing and developing high-quality experiences with care for the details.</p>
+    <div class="about-actions">
+      <a class="about-button about-button-primary" href="/products.html">Explore my apps →</a>
+      <a class="about-button about-button-secondary" href="https://zenith-fork.github.io" target="_blank" rel="noopener noreferrer">Visit Zenith Fork ↗</a>
+    </div>
+  </section>
+
+  <section class="about-section" aria-labelledby="about-apps-title">
+    <h2 id="about-apps-title">Apps made with intention</h2>
+    <p>Each app starts with a simple idea and grows through careful design. Explore the full collection, including clocks, a private photo vault, a habit and mood tracker, and a fruit puzzle game.</p>
+    <div class="about-apps">
+      <a class="about-app" href="/products.html"><img src="/assets/img/innoclock.png" alt="Inno Clock icon" loading="lazy"><span><strong>Inno Clock</strong><small>Creative ways to see time</small></span></a>
+      <a class="about-app" href="/products.html"><img src="/assets/img/flipclock.png" alt="ZenFlip icon" loading="lazy"><span><strong>ZenFlip</strong><small>A full-screen flip clock</small></span></a>
+      <a class="about-app" href="/products.html"><img src="/assets/img/bezierclock.png" alt="Bezier Clock icon" loading="lazy"><span><strong>Bezier Clock</strong><small>Time drawn in flowing curves</small></span></a>
+      <a class="about-app" href="/products.html"><img src="/assets/img/pixvault.png" alt="PixVault icon" loading="lazy"><span><strong>PixVault</strong><small>A private place for photos</small></span></a>
+      <a class="about-app" href="/products.html"><img src="/assets/img/habitpulse.png" alt="HabitPulse icon" loading="lazy"><span><strong>HabitPulse</strong><small>Habits and mood, together</small></span></a>
+      <a class="about-app" href="/products.html"><img src="/assets/img/orchardpop.png" alt="Orchard Pop icon" loading="lazy"><span><strong>Orchard Pop</strong><small>A playful fruit puzzle</small></span></a>
+    </div>
+  </section>
+
+  <section class="about-studio" aria-labelledby="about-studio-title">
+    <img src="/assets/img/zenith-fork-social.png" alt="Zenith Fork Studio handcrafted solid-wood slingshot" loading="lazy">
+    <div class="about-studio-copy">
+      <span class="about-eyebrow">Beyond the screen</span>
+      <h2 id="about-studio-title">Zenith Fork Studio</h2>
+      <p>I'm also passionate about solid-wood slingshots. That interest led me to found Zenith Fork Studio, where form, material, and hands-on craftsmanship take center stage. It is another way I explore thoughtful design—this time in wood.</p>
+      <a href="https://zenith-fork.github.io" target="_blank" rel="noopener noreferrer">Discover Zenith Fork Studio ↗</a>
+    </div>
+  </section>
+</div>

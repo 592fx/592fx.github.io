@@ -25,6 +25,7 @@ author: huhansome
 ###############################################
 
 navbar-links:
+  About: "./about.html"
   Category: "tags"
   Amazing Apps: "./products.html"
   zenith fork: "https://zenith-fork.github.io"
